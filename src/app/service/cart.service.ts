@@ -18,14 +18,14 @@ export class CartService {
   }
   addToCard(product: any) {
     this.cartItenList.push(product);
-    this.productList.next(this.cartItenList);
+    this.productList.next(this.cartItenList); // و اضافة االمنتجاتملف الاضافة لتكوين المعادله
     this.getTotalPrice();
     console.log(this.cartItenList);
   }
   getTotalPrice() {
     let grandTotal = 0;
     this.cartItenList.map((a: any) => {
-      grandTotal += a.total;
+      grandTotal += a.total; //اضافة نتيجة التوتال فقط
     });
     return grandTotal;
   }
